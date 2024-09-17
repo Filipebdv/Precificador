@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precificador Loja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Precificador</h1>
+        <div class="input">
+            <label for="product">Digite o valor unitário ou total</label><br>
+            <input type="number" name="product" id="productValue" placeholder="00,00"><br>
+            <label for="quantity">quantidade de produtos atribuidos ao valor</label><br>
+            <input type="number" name="quantity" id="productQuantity" placeholder="1" min="2"><br>
+            <label for="percentage">Escolha a margem de lucro %</label><br>
+            <input type="number" name="percentage" id="percentage" placeholder="min 30%" step="5" min="30" max="100" height="100px">
+            <input type="submit" name="" id="submit" onclick="math()" ><br>
+            <label for="copy">Deixe marcado para copiar automaticamente o valor final</label><br>
+            <label class="switch">
+                <input type="checkbox" id="copy" name="copy" checked>
+                <span class="slider round"></span>
+              </label>
+        </div>
+        <div class="result">
+            <h2>Valor unitário</h2>
+            <p id="resultPart"></p>
+            <h2>Valor final</h2>
+            <p id="resultTotal"></p>
+            <h2>Lucro</h2>
+            <p id="profit"></p>
+            <h2>Parte Loja</h2>
+            <p id="store"></p>
+            <h2>Parte Online</h2>
+            <p id="online"></p><br>
+        
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
